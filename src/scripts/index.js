@@ -90,13 +90,12 @@ const renderPictures = function (list) {
     if (!list.length) {
         throw Error(`Pictures not defined. The list length: ${list.length}`);
     }
-
-    const clone = templateImageCard.content.cloneNode(true);
+    
     const fragment = document.createDocumentFragment();
 
     list.forEach(function (element) {
+        const clone = templateImageCard.content.cloneNode(true);
         const link = clone.querySelector('a');
-
         link.href = element.url;
         link.dataset.id = element.id;
 
