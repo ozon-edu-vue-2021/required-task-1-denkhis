@@ -132,7 +132,7 @@ figcaption {
     visibility: visible;
 }
 
-/* .action {
+.popup .action {
     position: absolute;
     top: 50px;
     right: 50px;
@@ -142,7 +142,7 @@ figcaption {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-} */
+}
 
 .popup .content {
     width: 100%;
