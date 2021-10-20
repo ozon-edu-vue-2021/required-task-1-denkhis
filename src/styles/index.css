@@ -40,7 +40,6 @@ main {
     max-width: 1400px;
     min-height: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
     padding: 50px;
     background-color: #fff;
@@ -51,6 +50,7 @@ main {
 
 /* Action style */
 .action {
+    align-self: center;
     background-color: #66BB6A;
     font-size: 16px;
     padding: 10px 20px;
@@ -120,7 +120,6 @@ figcaption {
 .popup {
     position: fixed;
     visibility: hidden;
-    display: flex;
     top: 0;
     left: 0;
     bottom: 0;
@@ -132,8 +131,8 @@ figcaption {
 .popup.open {
     visibility: visible;
 }
-/* 
-.action {
+
+/* .action {
     position: absolute;
     top: 50px;
     right: 50px;
