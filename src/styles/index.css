@@ -28,14 +28,6 @@ button {
     transition: 0.2s background-color;
 }
 
-button:disabled {
-    background-color: #CFD8DC;
-}
-
-button:disabled:hover {
-    background-color: #CFD8DC;
-}
-
 main {
     max-width: 1400px;
     min-height: 100%;
@@ -48,8 +40,7 @@ main {
     margin: 50px auto;
 }
 
-/* Action style */
-.action {
+.fetch {
     align-self: center;
     background-color: #66BB6A;
     font-size: 16px;
@@ -58,8 +49,16 @@ main {
     margin: 10px 0;
 }
 
-.action:hover {
+.fetch:hover {
     background-color: #4CAF50;
+}
+
+.fetch:disabled {
+    background-color: #CFD8DC;
+}
+
+.fetch:disabled:hover {
+    background-color: #CFD8DC;
 }
 
 /* Images style */
@@ -132,7 +131,7 @@ figcaption {
     visibility: visible;
 }
 
-.popup .action {
+.close {
     position: absolute;
     top: 50px;
     right: 50px;
