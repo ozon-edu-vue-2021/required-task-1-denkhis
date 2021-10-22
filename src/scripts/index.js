@@ -153,9 +153,11 @@ const actionHandler = function (evt) {
     const nextPage = evt.currentTarget.dataset.page;
     evt.currentTarget.dataset.page = +nextPage + 1;
 
-    if (nextPage > MAX_PAGE_IMAGES) {
-        console.warn(`WARN: You are trying to call a page that exceeds ${MAX_PAGE_IMAGES}`);
+    if (nextPage == MAX_PAGE_IMAGES) {
         evt.currentTarget.disabled = true;
+        getPictures(nextPage);
+    } else if (nextPage > MAX_PAGE_IMAGES) {
+        console.warn(`WARN: You are trying to call a page that exceeds ${MAX_PAGE_IMAGES}`);
     } else {
         getPictures(nextPage);
     }
@@ -170,9 +172,9 @@ const actionHandler = function (evt) {
 const imageHandler = function (evt) {
     evt.preventDefault();
 
-    if (evt.target.closest('a')) {
-        getPictureInfo(evt.target.closest('a').dataset.id);
-    }
+    const closestLink = evt.target.closest('a')
+
+    if (closestLink) getPictureInfo(closestLink.dataset.id);
 }
 
 action.addEventListener('click', actionHandler);
